@@ -6,7 +6,10 @@ return {
       require "configs.conform"
     end,
   },
-
+  {
+    "github/copilot.vim",
+    lazy = false,
+  },
   {
     "neovim/nvim-lspconfig",
     config = function()
@@ -14,7 +17,6 @@ return {
       require "configs.lspconfig"
     end,
   },
-
   {
     "williamboman/mason.nvim",
     opts = {
@@ -56,8 +58,18 @@ return {
     config = function()
       require("auto-session").setup {
         log_level = "error",
-        auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
+        pre_save_cmds = { "NvimTreeClose" },
       }
     end,
+  },
+  {
+    "smoka7/hop.nvim",
+    lazy = false,
+    version = "*",
+    opts = {
+      multi_windows = true,
+      keys = "etovxqpdygfblzhckisuran",
+      uppercase_labels = true,
+    },
   },
 }

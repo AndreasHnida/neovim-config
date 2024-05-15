@@ -36,3 +36,9 @@ require "nvchad.autocmds"
 vim.schedule(function()
   require "mappings"
 end)
+
+-- Toggle transparency
+vim.api.nvim_create_user_command('ToggleTransparency', function()
+  require("base46").toggle_transparency()
+  print("Toggling Transparency")
+end, { desc = "Toggle Transparency" })

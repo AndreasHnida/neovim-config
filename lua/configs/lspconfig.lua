@@ -5,7 +5,7 @@ local capabilities = require("nvchad.configs.lspconfig").capabilities
 local map = vim.keymap.set
 local conf = require("nvconfig").ui.lsp
 local lspconfig = require "lspconfig"
-local servers = { "html", "cssls", "marksman", "lua_ls" }
+local servers = { "html", "cssls", "marksman" }
 
 local on_attach = function(client, bufnr)
   local function opts(desc)
@@ -27,7 +27,7 @@ local on_attach = function(client, bufnr)
   map("n", "<leader>D", vim.lsp.buf.type_definition, opts "Go to type definition")
 
   map("n", "<leader>ra", function()
-    require "nvchad.lsp.renamer"()
+    require "nvchad.lsp.renamer" ()
   end, opts "NvRenamer")
 
   map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts "Code action")

@@ -5,9 +5,9 @@
 local M = {}
 
 M.ui = {
-  theme = "everblush",
-  theme_toggle = { "onenord","everblush"},
-  -- tansparency = true,
+  theme = "dark_horizon",
+  theme_toggle = { "onenord", "dark_horizon" },
+  tansparency = true,
   hl_override = {
     Comment = { italic = true },
     ["@comment"] = { italic = true },

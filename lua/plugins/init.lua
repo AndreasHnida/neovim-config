@@ -75,5 +75,9 @@ return {
   {
     "ThePrimeagen/harpoon",
     lazy = false,
+    config = function()
+      require("harpoon").setup()
+      require("telescopy").load_extension('harpoon')
+    end
   }
 }

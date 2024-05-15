@@ -42,3 +42,9 @@ vim.api.nvim_create_user_command('ToggleTransparency', function()
   require("base46").toggle_transparency()
   print("Toggling Transparency")
 end, { desc = "Toggle Transparency" })
+
+-- open config files
+vim.api.nvim_create_user_command('ConfigMe', function()
+  vim.cmd([[Telescope find_files cwd=~/AppData/Local/nvim]])
+  print("showing config files")
+end, { desc = "Show Config Files" })

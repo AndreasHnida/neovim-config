@@ -62,3 +62,11 @@ lspconfig.tsserver.setup {
   on_init = on_init,
   capabilities = capabilities,
 }
+
+lspconfig.clangd.setup {
+  filetypes = { "c", "cpp", "objc", "objcpp" }, -- Adding a custom file type
+  on_attach = on_attach,
+  on_init = on_init,
+  capabilities = capabilities,
+  cmd = { "clangd", "--header-insertion=never" }
+}

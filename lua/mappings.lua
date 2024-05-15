@@ -26,6 +26,7 @@ map("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 -- Harpoon
 map("n", "Ä", "<CMD>lua require('harpoon.mark').add_file()<CR>", { desc = "Harpoon mark file" })
 map("n", "ä", "<CMD>lua require('harpoon.ui').toggle_quick_menu()<CR>", { desc = "Harpoon quick menu" })
+-- map("n", "ä", "<CMD>Telescope harpoon marks<CR>", { desc = "Harpoon quick menu" })
 map("n", "<M-ä>", "<CMD>lua require('harpoon.term').gotoTerminal(1)<CR>", { desc = "Harpoon terminal 1" })
 map("t", "<C-c>", "<CMD>:bd!<CR>")
 map("t", "<tab>", function()

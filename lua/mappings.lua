@@ -10,6 +10,7 @@ map("n", "K", "5k", { desc = "Move up 5 Linies" })
 map("n", "J", "5j", { desc = "Move down 5 Linies" })
 map("n", "<leader>ww", '<CMD>:w<CR>', { desc = "Write file" })
 
+map("n", "F", vim.lsp.buf.hover, { desc = "hover information" })
 -- Telescope
 map("n", "<leader><leader>", "<CMD>lua require('telescope.builtin').find_files()<CR>", { desc = "Telescope find files" })
 -- Hop

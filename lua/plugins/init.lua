@@ -77,7 +77,7 @@ return {
     lazy = false,
     config = function()
       require("harpoon").setup()
-      require("telescopy").load_extension('harpoon')
+      require("telescope").load_extension('harpoon')
     end
   }
 }

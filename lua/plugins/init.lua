@@ -72,4 +72,8 @@ return {
       uppercase_labels = true,
     },
   },
+  {
+    "ThePrimeagen/harpoon",
+    lazy = false,
+  }
 }

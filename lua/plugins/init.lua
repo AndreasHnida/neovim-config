@@ -42,17 +42,17 @@ return {
       },
     },
     config = function()
-      require "nvim-treesitter.configs".setup {
+      require("nvim-treesitter.configs").setup {
         autotag = { enable = true },
       }
     end,
   },
   {
-    'windwp/nvim-ts-autotag',
+    "windwp/nvim-ts-autotag",
     lazy = false,
     config = function()
-      require('nvim-ts-autotag').setup()
-    end
+      require("nvim-ts-autotag").setup()
+    end,
   },
   {
     "stevearc/oil.nvim",
@@ -89,7 +89,15 @@ return {
     lazy = false,
     config = function()
       require("harpoon").setup()
-      require("telescope").load_extension('harpoon')
-    end
-  }
+      require("telescope").load_extension "harpoon"
+    end,
+  },
+  {
+    "anuvyklack/pretty-fold.nvim",
+    -- load when new file is opened
+    event = "BufRead",
+    config = function()
+      require("pretty-fold").setup()
+    end,
+  },
 }

@@ -5,8 +5,8 @@
 local M = {}
 
 M.ui = {
-  theme = "bearded-arc",
-  theme_toggle = { "onenord", "bearded-arc" },
+  theme = "onedark",
+  theme_toggle = { "onenord", "onedark" },
   tansparency = true,
   hl_override = {
     Comment = { italic = true },

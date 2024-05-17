@@ -2,7 +2,7 @@ require "nvchad.options"
 
 -- add yours here!
 vim.opt.foldcolumn = "0"
-vim.opt.foldmethod = "expr"
+vim.opt.foldmethod = "indent"
 vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.opt.foldtext = ""
 
@@ -19,5 +19,11 @@ end
 
 vim.keymap.set("n", "<leader>zs", close_all_folds, { desc = "[s]hut all folds" })
 vim.keymap.set("n", "<leader>zo", open_all_folds, { desc = "[o]pen all folds" })
+require("nvim-treesitter.configs").setup {
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = false,
+  },
+}
 -- local o = vim.o
 -- o.cursorlineopt ='both' -- to enable cursorline!

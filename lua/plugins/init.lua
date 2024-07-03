@@ -42,17 +42,17 @@ return {
       },
     },
     config = function()
-      require "nvim-treesitter.configs".setup {
+      require("nvim-treesitter.configs").setup {
         autotag = { enable = true },
       }
     end,
   },
   {
-    'windwp/nvim-ts-autotag',
+    "windwp/nvim-ts-autotag",
     lazy = false,
     config = function()
-      require('nvim-ts-autotag').setup()
-    end
+      require("nvim-ts-autotag").setup()
+    end,
   },
   {
     "stevearc/oil.nvim",

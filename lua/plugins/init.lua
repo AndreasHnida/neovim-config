@@ -91,5 +91,13 @@ return {
       require("harpoon").setup()
       require("telescope").load_extension('harpoon')
     end
+  },
+  {
+    'kevinhwang91/nvim-ufo',
+    dependencies = { "kevinhwang91/promise-async" },
+    lazy = false,
+    config = function()
+      require "configs.ufo"
+    end
   }
 }

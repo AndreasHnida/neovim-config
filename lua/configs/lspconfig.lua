@@ -5,7 +5,7 @@ local capabilities = require("nvchad.configs.lspconfig").capabilities
 local map = vim.keymap.set
 local conf = require("nvconfig").ui.lsp
 local lspconfig = require "lspconfig"
-local servers = { "html", "cssls", "marksman" }
+local servers = { "html", "cssls", "marksman", "intelephense", "gopls" }
 
 local on_attach = function(client, bufnr)
   local function opts(desc)

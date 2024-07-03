@@ -2,8 +2,10 @@ local options = {
   formatters_by_ft = {
     lua = { "stylua" },
     css = { "prettier" },
+    go = { "goimports", "gofumpt" },
     html = { "prettier" },
     markdown = { "prettier" },
+    php = { "phpstan" },
   },
 
   format_on_save = {

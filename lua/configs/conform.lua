@@ -1,15 +1,19 @@
-local options = {
+require("conform").setup({
   formatters_by_ft = {
     lua = { "stylua" },
-    -- css = { "prettier" },
-    -- html = { "prettier" },
+    css = { "prettier" },
+    html = { "prettier" },
+    vue = { "prettier" },
   },
-
-  -- format_on_save = {
-  --   -- These options will be passed to conform.format()
-  --   timeout_ms = 500,
-  --   lsp_fallback = true,
-  -- },
-}
-
-return options
+  formatters = {
+    prettier = {
+      command = "C:/Users/mail/AppData/Local/nvim-data/mason/bin/prettier.CMD",
+      args = { "--stdin-filepath", "$FILENAME" },
+      stdin = true,
+    },
+  },
+  format_on_save = {
+    timeout_ms = 500,
+    lsp_fallback = true,
+  },
+})
